@@ -1,3 +1,4 @@
+// Submit Form
 $("form").submit(function(e) {
   e.preventDefault();
 
@@ -67,7 +68,7 @@ $("form").submit(function(e) {
       }
 
       $("#weather").append(`
-      <div class="col-lg-4 my-2">
+      <div class="col-lg-4 my-2 weatherCard">
 
         <div class="card">
           <div class="card-body px-4">
@@ -106,5 +107,9 @@ $("form").submit(function(e) {
       $("#error").append($error).removeClass("d-none");
     });
   }
+});
 
+// Clear Weather Button
+$("#clearWeather").click(function() {
+  $(".weatherCard").remove();
 });
